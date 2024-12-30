@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menuImg {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘의 추천 메뉴</h1>
+    <h2 id="foodName"></h2>
+    <div id="foodImg">
+        <img src="" id="menuImg" />
+    </div>
+
+    <button onclick="location.reload();">다시 하기</button>
+
+    <script>
+        // 오늘의 메뉴를 랜덤하게 추천하기
+        // 1. 돈까스, 2. 짜장면, 3. 김치째개, 4. 떡뽁이, 5. 우동
+        
+
+        // 1. 난수 생성 (1 ~ 5 까지)
+        let choice = parseInt(Math.random() * 5 + 1);
+
+        // 2. 난수에 해당하는 메뉴룰 화면에 출력
+
+        let foodName = "";
+        let menuImg = "";
+
+        if (choice == 1) {
+            foodName = "돈까스";
+            menuImg = "dongas.jpg";
+        } else if (choice == 2) {
+            foodName = "짜장면";
+            menuImg = "jjajang.jpg";
+        } else if (choice == 3) {
+            foodName = "김치찌개";
+            menuImg = "gimchi.jpg";
+        } else if (choice == 4) {
+            foodName = "떡볶이";
+            menuImg = "dduk.jpg";
+        } else {
+            foodName = "우동";
+            menuImg = "noodle.jpg";
+        }
+
+        document.getElementById("foodName").innerHTML = foodName;
+        document.getElementById("menuImg").src = menuImg;
+
+    </script>
+
+
+
+</body>
+</html>

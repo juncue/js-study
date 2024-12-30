@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function plus() {
+            let val = document.getElementById("val").value;
+            val = Number(val) + 1;
+            document.getElementById("val").value = val;
+        }
+
+        function minus() {
+            let val = document.getElementById("val").value;
+            if (val > 1) {
+                val = Number(val) - 1;
+                document.getElementById("val").value = val;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="minus();">-</button>
+    <input type="text" value="1" id="val">
+    <button onclick="plus();">+</button>
+
+</body>
+</html>
